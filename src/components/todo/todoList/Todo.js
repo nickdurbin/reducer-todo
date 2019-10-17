@@ -1,17 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-function Todo({ task, toggle }) {
+function Todo({ dispatch, state, item }) {
   return (
     <>
-    <li onClick={() => toggle(task.id)}>
-      {task.completed ? <del>{`${task.task}`}</del> : `${task.task}`}
+    <li>
+      {item.completed ? <del>{`${item.item}`}</del> : `${item.item}`}
     </li>
-    <button>
-      <Link to={`/edittask/${task.id}`}>
-         Edit
-      </Link>
-    </button>
     </>
   )
 }

@@ -2,20 +2,17 @@ import React from 'react';
 import Todo from './Todo';
 import { Link } from 'react-router-dom';
 
-function TodoList({ tasks, toggle, deleteCompleted }) {
+function TodoList({ state, dispatch, todoList }) {
   
   return (
     <div>
       <ul>
-        {tasks.map(task => <Todo key={task.id} task={task} toggle={toggle} />)}
+        {todoList.map(item=> <Todo key={item.id} item={item} dispatch={dispatch} />)}
       </ul>
       <button>
-        <Link to='/addtask'>
+        <Link to='/add'>
           Add Task
         </Link>
-      </button>
-      <button onClick={deleteCompleted}>
-        Delete Completed
       </button>
     </div>
   )
