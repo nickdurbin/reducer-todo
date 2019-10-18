@@ -16,22 +16,26 @@ function TodoForm({ dispatch }) {
   }
 
   return (
-    <div>
+    <>
       <form onSubmit={handleSubmit}>
         <h1>Todo Manager</h1>
         <input 
         name="task"
         value={formValue}
-        placeholder='Add Task...'
+        placeholder='Add Todo...'
         onChange={handleChange}
         />
-        <button type='submit'>Submit</button>
-        
-        <button className="removeBtn" onClick={() => dispatch({ type: 'REMOVE_TODO' })}>
+        <div className='btnContainer'>
+          <button className='submitBtn' type='submit'>
+            Submit
+          </button>
+          
+          <button className="removeBtn" onClick={() => dispatch({ type: 'REMOVE_TODO' })}>
             Remove Completed
-        </button>
+          </button>
+        </div>
       </form>
-    </div>
+    </>
   )
 }
 

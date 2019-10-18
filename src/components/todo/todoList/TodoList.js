@@ -6,7 +6,7 @@ function TodoList({ state, dispatch, todoList }) {
   console.log(dispatch)
   
   return (
-    <div>
+    <div className='listContainer'>
       <div className="formContainer">
         <TodoForm dispatch={dispatch} />
       </div>

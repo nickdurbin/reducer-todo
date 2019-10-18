@@ -23,3 +23,83 @@ code {
   width: 100%;
   height: 100vh;
 }
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.formContainer {
+  width: 100%;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+input {
+  width: 250px;
+  height: 35px;
+  padding: 2%;
+  border-radius: 5px;
+  margin: 2% auto;
+}
+
+input:focus {
+  outline: none;
+}
+
+li {
+  font-size: 1.2rem;
+}
+
+button {
+  margin: 2% auto;
+  width: 120px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  color: white;
+}
+
+button:focus {
+  outline: none;
+}
+
+.submitBtn {
+  background-color:#3f51b5;
+}
+
+.submitBtn:hover {
+  background-color: #052af7;
+  transform: scale(1.02);
+}
+
+.removeBtn {
+  background-color: #ff3366;
+}
+
+.removeBtn:hover {
+  background-color: #fc003f; 
+  transform: scale(1.02);
+}
