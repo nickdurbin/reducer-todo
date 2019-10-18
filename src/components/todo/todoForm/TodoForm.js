@@ -26,6 +26,10 @@ function TodoForm({ dispatch }) {
         onChange={handleChange}
         />
         <button type='submit'>Submit</button>
+        
+        <button className="removeBtn" onClick={() => dispatch({ type: 'REMOVE_TODO' })}>
+            Remove Completed
+        </button>
       </form>
     </div>
   )

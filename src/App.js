@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className="App">
-      <TodoList todoList={state.todoItems} state={state} dispath={dispatch} />
+      <TodoList todoList={state.todoItems} state={state} dispatch={dispatch} />
     </div>
   );
 }

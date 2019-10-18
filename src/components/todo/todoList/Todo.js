@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Todo({ dispatch, state, item }) {
+function Todo({ dispatch, item }) {
   return (
     <>
-    <li onClick={() => dispatch({ type: 'TOGGLE_ITEM', payload: item })}>
-      {item.isCompleted ? <del>{`${item.item}`}</del> : `${item.item}`}
-    </li>
+      <li onClick={() => dispatch({ type: 'TOGGLE_TODO', payload: item })}>
+        {item.isCompleted ? <del>{`${item.item}`}</del> : `${item.item}`}
+      </li>
     </>
   )
 }
