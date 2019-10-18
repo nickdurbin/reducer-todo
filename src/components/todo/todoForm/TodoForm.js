@@ -18,7 +18,7 @@ function TodoForm({ dispatch }) {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <h1>MANAGE <br /> YOUR PRODUCTIVITY</h1>
+        <h1>MANAGE <br /> YOUR <br /> PRODUCTION</h1>
         <hr />
         <input 
         name="task"
@@ -32,7 +32,7 @@ function TodoForm({ dispatch }) {
           </button>
           
           <button className="removeBtn" onClick={() => dispatch({ type: 'REMOVE_TODO' })}>
-            Remove Completed
+            Remove
           </button>
         </div>
       </form>
