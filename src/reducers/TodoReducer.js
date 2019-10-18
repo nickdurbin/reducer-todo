@@ -14,7 +14,7 @@ export const reducer = (state, action) => {
       return {
         ...state, todoItems: [ ...state.todoItems, 
           {
-            item: '',
+            item: action.payload,
             isCompleted: false,
             id: Date.now(),
           }

@@ -4,7 +4,7 @@ function Todo({ dispatch, state, item }) {
   return (
     <>
     <li>
-      {item.completed ? <del>{`${item.item}`}</del> : `${item.item}`}
+      {item.isCompleted ? <del>{`${item.item}`}</del> : `${item.item}`}
     </li>
     </>
   )

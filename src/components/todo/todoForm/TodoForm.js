@@ -10,9 +10,9 @@ function TodoForm({ dispatch }) {
   const handleSubmit = (e) => {
     e.preventDefault()
     if (formValue !== '') {
-      dispatch({ type: 'ADD_ITEM', payload: formValue })
+      dispatch({ type: 'ADD_TODO', payload: formValue })
       setFormValue('')
-  }
+    }
   }
 
   return (
