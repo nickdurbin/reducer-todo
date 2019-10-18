@@ -10,9 +10,9 @@ function TodoList({ state, dispatch, todoList }) {
       <div className="formContainer">
         <TodoForm dispatch={dispatch} />
       </div>
-      <ul>
+      <div className='listItems'>
         {todoList.map(item=> <Todo key={item.id} item={item} dispatch={dispatch} />)}
-      </ul>
+      </div>
     </div>
   )
 }

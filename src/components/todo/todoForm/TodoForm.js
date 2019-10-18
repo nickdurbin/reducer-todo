@@ -10,7 +10,7 @@ function TodoForm({ dispatch }) {
   const handleSubmit = (e) => {
     e.preventDefault()
     if (formValue !== '') {
-      dispatch({ type: 'ADD_TODO', payload: formValue })
+      dispatch({ type: 'ADD_TODO', payload: formValue.toUpperCase() })
       setFormValue('')
     }
   }
@@ -18,7 +18,8 @@ function TodoForm({ dispatch }) {
   return (
     <>
       <form onSubmit={handleSubmit}>
-        <h1>Todo Manager</h1>
+        <h1>MANAGE <br /> YOUR PRODUCTIVITY</h1>
+        <hr />
         <input 
         name="task"
         value={formValue}
