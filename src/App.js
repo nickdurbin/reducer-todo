@@ -1,6 +1,5 @@
 import React, { useReducer } from 'react';
 import TodoList from './components/todo/todoList/TodoList';
-import TodoForm from './components/todo/todoForm/TodoForm';
 import { initialState, reducer } from './reducers/TodoReducer';
 
 function App() {
@@ -8,7 +7,6 @@ function App() {
 
   return (
     <div className="App">
-      <TodoForm dispatch={dispatch} />
       <TodoList todoList={state.todoItems} state={state} dispath={dispatch} />
     </div>
   );

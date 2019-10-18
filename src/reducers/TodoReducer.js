@@ -20,6 +20,22 @@ export const reducer = (state, action) => {
           }
         ]
       }
+      case 'TOGGLE_TODO':
+        const toggleTodo = state.todoItems.map(item => {
+          if (item.id === action.payload.id) {
+            return { ...item, isCompleted: !item.isCompleted };
+          } else {
+            return item;
+          }
+        });
+      return {
+        ...state,
+        todoItems: toggleTodo
+      }
+      case 'REMOVE_TODO':
+			return {
+				todoItems: state.todoItems.filter(item => !item.isCompleted)
+			};
     default:
       return state;
   }
