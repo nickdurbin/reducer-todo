@@ -3,7 +3,7 @@ import { useLocalStorage } from '../../../utils/useLocalStorage';
 
 function TodoForm({ dispatch, state }) {
   const [formValue, setFormValue] = useState('')
-  const [todoID, setTodoID] = useLocalStorage('id', state)
+  const [todoID, setTodoID] = useLocalStorage('todo', {...state})
 
   const handleChange = (e) => {
     setFormValue(e.target.value);
