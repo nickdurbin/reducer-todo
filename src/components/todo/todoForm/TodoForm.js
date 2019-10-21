@@ -11,7 +11,6 @@ function TodoForm({ dispatch }) {
     e.preventDefault()
     if (formValue !== '') {
       dispatch({ type: 'ADD_TODO', payload: formValue.toUpperCase() })
-      dispatch({ type: 'LOCAL_STORAGE', payload: formValue })
       setFormValue('')
     }
   }
