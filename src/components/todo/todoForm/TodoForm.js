@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
+import { useLocalStorage } from '../../../utils/useLocalStorage';
 
-function TodoForm({ dispatch }) {
+function TodoForm({ dispatch, state }) {
   const [formValue, setFormValue] = useState('')
+  const [todoID, setTodoID] = useLocalStorage('id', state)
 
   const handleChange = (e) => {
     setFormValue(e.target.value);
@@ -13,6 +15,7 @@ function TodoForm({ dispatch }) {
       dispatch({ type: 'ADD_TODO', payload: formValue.toUpperCase() })
       setFormValue('')
     }
+    setTodoID(formValue)
   }
 
   return (

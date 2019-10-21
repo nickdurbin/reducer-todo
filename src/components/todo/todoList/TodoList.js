@@ -13,7 +13,7 @@ function TodoList() {
   return (
     <div className='listContainer'>
       <div className="formContainer">
-        <TodoForm dispatch={dispatch} />
+        <TodoForm dispatch={dispatch} state={state} />
       </div>
       <div className='listItems'>
         {state.todoItems.map(item=> <Todo key={item.id} item={item} dispatch={dispatch} />)}
