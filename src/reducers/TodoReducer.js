@@ -37,10 +37,12 @@ export const reducer = (state, action) => {
       todoItems: state.todoItems.filter(item => !item.isCompleted)
     };
     case 'LOCAL_STORAGE':
-      if (initialState.todoItems.id === action.payload.id) {
-        return localStorage.setItem('id', initialState.todoItems.id)
+      if (state.todoItems.id === action.payload.id) {
+        return localStorage.setItem('id', JSON.stringify(state.todoItems.id))
       } else {
-        return state
+        return {
+          ...state
+        }
       }
     default:
       return state;

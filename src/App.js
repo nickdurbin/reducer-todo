@@ -4,6 +4,7 @@ import { initialState, reducer } from './reducers/TodoReducer';
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState)
+  console.log(state)
 
   return (
     <div className="App">
