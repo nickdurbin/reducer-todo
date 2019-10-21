@@ -1,9 +1,14 @@
-import React from 'react';
+import React, {useContext } from 'react';
 import Todo from './Todo';
-import TodoForm from '../todoForm/TodoForm'
+import TodoForm from '../todoForm/TodoForm';
+import { TodoContext } from '../../../contexts/TodoContext';
 
-function TodoList({ state, dispatch, todoList }) {
+
+function TodoList() {
+  const { state, dispatch } = useContext(TodoContext)
+
   console.log(dispatch)
+  console.log(state.todoItems)
   
   return (
     <div className='listContainer'>
@@ -11,7 +16,7 @@ function TodoList({ state, dispatch, todoList }) {
         <TodoForm dispatch={dispatch} />
       </div>
       <div className='listItems'>
-        {todoList.map(item=> <Todo key={item.id} item={item} dispatch={dispatch} />)}
+        {state.todoItems.map(item=> <Todo key={item.id} item={item} dispatch={dispatch} />)}
       </div>
     </div>
   )

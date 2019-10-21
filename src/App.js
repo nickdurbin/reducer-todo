@@ -1,6 +1,7 @@
 import React, { useReducer } from 'react';
 import TodoList from './components/todo/todoList/TodoList';
 import { initialState, reducer } from './reducers/TodoReducer';
+import { TodoContext } from './contexts/TodoContext';
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState)
@@ -9,7 +10,9 @@ function App() {
   return (
     <div className="App">
       <div className='detailsContainer'>
-        <TodoList todoList={state.todoItems} state={state} dispatch={dispatch} />
+        <TodoContext.Provider value={{state, dispatch}}>
+          <TodoList />
+        </TodoContext.Provider>
       </div>
     </div>
   );
